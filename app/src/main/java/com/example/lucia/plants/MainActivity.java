@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -15,9 +16,15 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private ListView listanimali;
     private final static String EXTRA_ANIMALE= "animale";
+    private final static String REMOTE_ADD= " ";
+
+
+
+    private ListView listanimali=null;
+    //private RequestQueue mRequestQueue=null;
+    private ArrayAdapter<Animale> anadapter = null;
+
     private Adapter adapter;
     private List<Animale> animalilista = Collections.emptyList();
     ArrayList<Animale> arraylist = new ArrayList<Animale>();

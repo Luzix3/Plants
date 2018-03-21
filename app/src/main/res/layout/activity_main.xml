@@ -8,6 +8,7 @@
     tools:context="com.example.lucia.plants.MainActivity">
 
     <ListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/ListaAnimali"
         android:layout_width="0dp"
         android:layout_height="401dp"
