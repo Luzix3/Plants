@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private ListView listanimali;
-
+    private final static String EXTRA_ANIMALE= "animale";
     private Adapter adapter;
     private List<Animale> animalilista = Collections.emptyList();
     ArrayList<Animale> arraylist = new ArrayList<Animale>();
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listanimali=(ListView)findViewById(R.id.ListaAnimali);
+        listanimali= findViewById(R.id.ListaAnimali);
         adapter = new Adapter(this,animalilista);
 
         listanimali.setAdapter(adapter);
@@ -39,11 +39,13 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Animale animale = adapter.getItem(position);
                 Intent intent = new Intent(view.getContext(), Stato.class);
-              //putextra
+            //    intent.putExtra(EXTRA_ANIMALE, animale);
                 startActivity(intent);
             }
         });
 
+        Animale animale1= new Animale();
+        animale1.setNome("Animale 1");
 
 
 

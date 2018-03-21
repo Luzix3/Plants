@@ -78,7 +78,8 @@ public class Adapter extends BaseAdapter{
         holder.name.setText(animali.get(position).getNome());
 
 
-        ImageView ImageCopertina = convertView.findViewById(R.id.imageAnimale);
+
+
 
         //metto i parametri nell'oggetto libro per poi farli comparire nella listview
         Animale animale = animali.get(position);
