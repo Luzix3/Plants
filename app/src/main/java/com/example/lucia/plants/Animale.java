@@ -7,20 +7,23 @@ package com.example.lucia.plants;
 public class Animale {
 
     //attributi animale
-
-    private int acqua;
-    private String nome;
-    private int cibo;
-    private int temperatura;
+    private int ID_Sensore;
+    private int Livello_acqua;
+    private String Name;
+    private float Temperatura;
+    private float Umidità;
+    private String Data_evento;
 
 
 //costruttore
-    public Animale(String nome, int acqua, int cibo, int temperatura)
+    public Animale(String Name,int ID_Sensore, int Livello_acqua, float Temperatura, float Umidità, String Data_evento)
     {
-        this.nome=nome;
-        this.acqua=acqua;
-        this.cibo=cibo;
-        this.temperatura=temperatura;
+       this.Name=Name;
+       this.ID_Sensore=ID_Sensore;
+       this.Livello_acqua=Livello_acqua;
+       this.Temperatura=Temperatura;
+       this.Umidità=Umidità;
+       this.Data_evento=Data_evento;
 
     }
     //costruttore vuoto
@@ -28,41 +31,58 @@ public class Animale {
     {
 
     }
-
+    public Animale(String Name)
+    {
+        this.Name=Name;
+    }
     //getters e setters
-    public int getAcqua() {
-        return acqua;
+
+
+    public int getID_Sensore() {
+        return ID_Sensore;
     }
 
-    public void setAcqua(int acqua) {
-        this.acqua = acqua;
+    public void setID_Sensore(int ID_Sensore) {
+        this.ID_Sensore = ID_Sensore;
     }
 
-    public String getNome() {
-        return nome;
+    public int getLivello_acqua() {
+        return Livello_acqua;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setLivello_acqua(int livello_acqua) {
+        Livello_acqua = livello_acqua;
     }
 
-    public int getCibo() {
-        return cibo;
+    public String getName() {
+        return Name;
     }
 
-    public void setCibo(int cibo) {
-        this.cibo = cibo;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public int getTemperatura() {
-        return temperatura;
+    public float getTemperatura() {
+        return Temperatura;
     }
 
-    public void setTemperatura(int temperatura) {
-        this.temperatura = temperatura;
+    public void setTemperatura(float temperatura) {
+        Temperatura = temperatura;
     }
 
+    public float getUmidità() {
+        return Umidità;
+    }
 
+    public void setUmidità(float umidità) {
+        Umidità = umidità;
+    }
 
+    public String getData_evento() {
+        return Data_evento;
+    }
 
+    public void setData_evento(String data_evento) {
+        Data_evento = data_evento;
+    }
 }
