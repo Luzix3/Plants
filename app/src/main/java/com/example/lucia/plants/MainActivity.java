@@ -33,7 +33,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private final static String EXTRA_ANIMALE= "animale";
-    private final static String url="http://192.168.1.3/getSensori.php";
+    private final static String url="http://192.168.1.5/getSensori.php";
 
     //listview object
     ListView listView;
@@ -103,6 +103,11 @@ public class MainActivity extends AppCompatActivity {
                             }
 
 
+                            //creating custom adapter object
+                            Adapter adapter = new Adapter(Animalist, getApplicationContext());
+
+                            //adding the adapter to listview
+                            listView.setAdapter(adapter);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

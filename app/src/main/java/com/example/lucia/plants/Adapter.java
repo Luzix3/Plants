@@ -51,7 +51,7 @@ public class Adapter extends ArrayAdapter<Animale>{
         Animale anm = animali.get(position);
 
         //setting hero values to textviews
-       textAnima.setText(anm.getNome());
+       textAnima.setText(anm.getName());
 
         //returning the listitem
         return listViewItem;
